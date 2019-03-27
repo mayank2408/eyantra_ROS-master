@@ -1,0 +1,8 @@
+image: /home/freak/catkin_ws/src/task4/maps/mars_1.png
+#resolution: 0.017417143
+#resolution: 0.000282
+resolution: 0.003048
+origin: [-0.264, -0.0162, 0.00]
+negate: 0
+occupied_thresh: 0.7
+free_thresh: 0.69

@@ -1,0 +1,50 @@
+controller_frequency: 10
+recovery_behavior_enabled: false
+clearing_rotation_allowed: true
+
+TrajectoryPlannerROS:
+
+# Robot Configuration Parameters
+  max_vel_x: 0.32     #0.37>0.32
+  min_vel_x: 0.09    #0.07>-0.32
+
+  max_vel_theta: 3.5
+  min_vel_theta: -3.5
+  min_in_place_vel_theta: 0.3
+
+  escape_vel: -0.16
+  
+  acc_lim_x: 0.2
+  acc_lim_theta: 0.6
+
+# Goal Tolerance Parameters
+  yaw_goal_tolerance: 0.04
+  xy_goal_tolerance: 0.093
+
+# Forward Simulation Parameters
+  sim_time: 2.2
+  sim_granularity: 0.04
+  #angular_sim_granularity: 0.01
+  vx_samples: 3
+  vtheta_samples: 10
+
+# Trajectory Scoring Parameters
+  meter_scoring: true
+  pdist_scale: 0.65
+  gdist_scale: 0.9
+  occdist_scale: 0.1
+  heading_lookahead: 0.3
+  heading_scoring: false
+  dwa: false
+
+  publish_cost_grid_pc: true
+
+# Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.4
+
+# Differential-drive robot configuration
+  holonomic_robot: false
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+  acc_lim_y: 0.0
+  vy_samples: 1
